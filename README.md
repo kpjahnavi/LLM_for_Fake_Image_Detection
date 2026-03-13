@@ -1,5 +1,5 @@
-# 📚 VisionXplain : Explainable Fake Image Detection using CLIP and LLM
-
+# 📚 VisionXplain : LLM for Fake Image Detection
+ 
 This project develops an **AI-based fake image detection system** that analyzes uploaded images and classifies them as **REAL or FAKE**. The system processes images through a structured deep learning pipeline and uses **CLIP-based visual feature extraction, neural classification, attention heatmaps, and LLM-based reasoning** to provide both predictions and explanations.
 
 The goal of the system is to **detect AI-generated or manipulated images and reduce the spread of synthetic media and visual misinformation by providing an explainable and trustworthy image verification framework.**
