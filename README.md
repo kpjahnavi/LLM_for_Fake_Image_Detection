@@ -282,64 +282,64 @@ This architecture ensures **accurate, explainable, and scalable fake image detec
 ---
 
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
 LLM_Fake_Image_Detection/
 │
-├── backend/                                   # Backend system
-│
-│   ├── app.py                                 # Flask backend server
-│   ├── main.py                                # CLI testing script
-│
+├── backend/
+│   │
+│   ├── app.py                         # Flask backend server
+│   ├── main.py                        # CLI testing script
+│   │
 │   ├── pipeline/
-│   │   └── run_pipeline.py                    # Complete fake image detection pipeline
-│
+│   │   └── run_pipeline.py            # Complete fake image detection pipeline
+│   │
 │   ├── preprocessing/
-│   │   └── preprocess.py                      # Image preprocessing (resize, normalize)
-│
+│   │   └── preprocess.py              # Image preprocessing and normalization
+│   │
 │   ├── feature_extraction/
-│   │   └── clip_encoder.py                    # CLIP feature extraction module
-│
+│   │   └── clip_encoder.py            # CLIP visual feature extraction
+│   │
 │   ├── classification/
-│   │   └── classifier.py                      # Neural network classifier model
-│
+│   │   └── classifier.py              # Neural network classifier
+│   │
 │   ├── localization/
-│   │   └── attention_localization.py          # Attention heatmap generation
-│
+│   │   └── attention_localization.py  # Attention heatmap generation
+│   │
 │   ├── explainability/
-│   │   ├── blip_explainer.py                  # BLIP visual caption generation
-│   │   ├── heatmap_analyzer.py                # Heatmap interpretation
-│   │   └── llm_reasoner.py                    # LLM-based reasoning and explanation
-│
+│   │   ├── blip_explainer.py          # BLIP visual caption generation
+│   │   ├── heatmap_analyzer.py        # Heatmap interpretation
+│   │   └── llm_reasoner.py            # LLM-based explanation module
+│   │
 │   ├── static/
-│   │   ├── uploads/                           # Uploaded images from users
-│   │   └── heatmaps/                          # Generated attention heatmaps
-│
+│   │   ├── uploads/                   # Uploaded images from users
+│   │   └── heatmaps/                  # Generated attention heatmaps
+│   │
 │   ├── outputs/
-│   │   └── reports/                           # Generated TXT and PDF reports
+│   │   └── reports/                   # Generated TXT and PDF reports
+│   │
+│   └── fake_image_classifier.pth      # Trained fake image classifier model
 │
-│   └── fake_image_classifier.pth              # Trained fake image classification model
-│
-├── frontend/                                  # Web interface
-│
-│   ├── server.js                              # Node.js frontend server
-│   ├── package.json                           # Node.js dependencies
+├── frontend/
+│   │
+│   ├── server.js                      # Node.js frontend server
+│   ├── package.json                   # Node.js dependencies
 │   ├── package-lock.json
-│
+│   │
 │   ├── public/
-│   │   └── index.html                         # Main frontend UI page
-│
+│   │   └── index.html                 # Main frontend UI
+│   │
 │   ├── static/
 │   │   ├── css/
-│   │   │   └── style.css                      # UI styling
+│   │   │   └── style.css              # Frontend styling
 │   │   │
 │   │   └── js/
-│   │       └── script.js                      # Frontend interaction logic
+│   │       └── script.js              # Frontend interaction logic
+│   │
+│   └── node_modules/                  # Installed frontend packages
 │
-│   └── node_modules/                          # Installed frontend packages
-│
-├── requirements.txt                           # Python dependencies
-└── README.md                                  # Project documentation
+├── requirements.txt                   # Python dependencies
+└── README.md                          # Project documentation
 
 
 
