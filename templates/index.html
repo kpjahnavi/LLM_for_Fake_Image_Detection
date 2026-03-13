@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VisionXplain – Explainable Fake Image Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>VisionXplain – Explainable Fake Image Detection</h1>
+</div>
+
+<div class="container">
+
+    <!-- DESCRIPTION -->
+    <div class="section">
+        <h2>System Description</h2>
+        <p>
+            VisionXplain is an explainable AI system that detects fake images using
+            vision-language models. It classifies images, highlights important
+            visual regions, and generates human-readable explanations for transparency.
+        </p>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="section upload-section">
+        <h2>Upload an Image</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <br>
+            <button type="submit">Analyze Image</button>
+        </form>
+    </div>
+
+    {% if image_path %}
+    <!-- RESULT ANALYSIS BOX -->
+    <div class="analysis-box">
+
+        <div class="section">
+            <h2>Result Analysis</h2>
+
+            <div class="results">
+                <div class="result-box">
+                    <h3>Uploaded Image</h3>
+                    <img src="{{ image_path }}">
+                </div>
+
+                <div class="result-box">
+                    <h3>Prediction</h3>
+                    <p class="prediction {{ prediction|lower }}">{{ prediction }}</p>
+                    <p><b>Confidence:</b> {{ "%.2f"|format(confidence) }}</p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Attention Heatmap</h3>
+                    <img src="{{ heatmap_path }}">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Explanation</h2>
+            <p>{{ explanation_text }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Download Report</h2>
+            <a href="/download/txt"><button class="download-btn">TXT</button></a>
+            <a href="/download/pdf"><button class="download-btn">PDF</button></a>
+        </div>
+
+    </div>
+    {% endif %}
+
+</div>
+
+<div class="footer">
+    © 2025 VisionXplain | Explainable AI for Image Forensics
+</div>
+
+</body>
+</html>

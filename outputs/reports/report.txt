@@ -1,0 +1,38 @@
+================================================================================
+VISIONXPLAIN – FAKE IMAGE DETECTION REPORT
+================================================================================
+
+ANALYSIS METADATA
+--------------------------------------------------------------------------------
+Image File: photo.jpg
+Analysis Date: 2026-03-12 00:37:09
+
+CLASSIFICATION RESULT
+--------------------------------------------------------------------------------
+Prediction: FAKE
+Confidence Score: 80.78%
+
+AI-GENERATED EXPLANATION
+--------------------------------------------------------------------------------
+**Analysis:** The image depicts a man sitting in front of a bowling ball.
+**Visual Cues:** - The image shows a clear image of a man sitting in front of a
+bowling ball. - The background is relatively clean and clear, providing a good
+contrast for the man. - The man's posture is natural and relaxed, indicating
+that he is sitting comfortably. **Attention Regions:** - The image exhibits
+strong attention on the edges and textured areas of the bowling ball and man's
+hands. - The edges are well-defined and have a consistent pattern, suggesting
+that they are part of the bowling ball. - The textured areas are also well-
+defined and have a variety of patterns, indicating that they are part of the
+man's clothing. **Conclusion:** Based on the visual cues and attention regions,
+the image is classified as **real** with a confidence score of 80.8%.
+
+ANALYSIS DETAILS
+--------------------------------------------------------------------------------
+Original Image Path: static/uploads\photo.jpg
+Heatmap Path: static/heatmaps\photo.jpg
+Model: CLIP ViT-L/14 + Custom Classifier
+Feature Dimension: 768
+
+================================================================================
+END OF REPORT
+================================================================================
