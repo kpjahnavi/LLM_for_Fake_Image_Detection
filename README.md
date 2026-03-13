@@ -281,63 +281,65 @@ This architecture ensures **accurate, explainable, and scalable fake image detec
 
 ---
 
-# 🗂️ Project Structure
+
+## 🗂️ Project Structure
+
 LLM_Fake_Image_Detection/
 │
-├── backend/
-│ │
-│ ├── app.py # Flask backend server
-│ ├── main.py # CLI testing script
-│ │
-│ ├── pipeline/
-│ │ └── run_pipeline.py # Complete detection pipeline
-│ │
-│ ├── preprocessing/
-│ │ └── preprocess.py # Image preprocessing
-│ │
-│ ├── feature_extraction/
-│ │ └── clip_encoder.py # CLIP feature extraction
-│ │
-│ ├── classification/
-│ │ └── classifier.py # Neural classifier model
-│ │
-│ ├── localization/
-│ │ └── attention_localization.py # Attention heatmap generation
-│ │
-│ ├── explainability/
-│ │ ├── blip_explainer.py # BLIP visual captioning
-│ │ ├── heatmap_analyzer.py # Heatmap interpretation
-│ │ └── llm_reasoner.py # LLM explanation module
-│ │
-│ ├── static/
-│ │ ├── uploads/ # Uploaded images
-│ │ └── heatmaps/ # Generated heatmaps
-│ │
-│ ├── outputs/
-│ │ └── reports/ # Generated TXT and PDF reports
-│ │
-│ └── fake_image_classifier.pth # Trained classifier model
+├── backend/                                   # Backend system
 │
-├── frontend/
-│ │
-│ ├── server.js # Node.js frontend server
-│ ├── package.json # Node dependencies
-│ ├── package-lock.json
-│ │
-│ ├── public/
-│ │ └── index.html # Main frontend UI
-│ │
-│ ├── static/
-│ │ ├── css/
-│ │ │ └── style.css # Styling for UI
-│ │ │
-│ │ └── js/
-│ │ └── script.js # Frontend interaction logic
-│ │
-│ └── node_modules/ # Installed frontend packages
+│   ├── app.py                                 # Flask backend server
+│   ├── main.py                                # CLI testing script
 │
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+│   ├── pipeline/
+│   │   └── run_pipeline.py                    # Complete fake image detection pipeline
+│
+│   ├── preprocessing/
+│   │   └── preprocess.py                      # Image preprocessing (resize, normalize)
+│
+│   ├── feature_extraction/
+│   │   └── clip_encoder.py                    # CLIP feature extraction module
+│
+│   ├── classification/
+│   │   └── classifier.py                      # Neural network classifier model
+│
+│   ├── localization/
+│   │   └── attention_localization.py          # Attention heatmap generation
+│
+│   ├── explainability/
+│   │   ├── blip_explainer.py                  # BLIP visual caption generation
+│   │   ├── heatmap_analyzer.py                # Heatmap interpretation
+│   │   └── llm_reasoner.py                    # LLM-based reasoning and explanation
+│
+│   ├── static/
+│   │   ├── uploads/                           # Uploaded images from users
+│   │   └── heatmaps/                          # Generated attention heatmaps
+│
+│   ├── outputs/
+│   │   └── reports/                           # Generated TXT and PDF reports
+│
+│   └── fake_image_classifier.pth              # Trained fake image classification model
+│
+├── frontend/                                  # Web interface
+│
+│   ├── server.js                              # Node.js frontend server
+│   ├── package.json                           # Node.js dependencies
+│   ├── package-lock.json
+│
+│   ├── public/
+│   │   └── index.html                         # Main frontend UI page
+│
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css                      # UI styling
+│   │   │
+│   │   └── js/
+│   │       └── script.js                      # Frontend interaction logic
+│
+│   └── node_modules/                          # Installed frontend packages
+│
+├── requirements.txt                           # Python dependencies
+└── README.md                                  # Project documentation
 
 
 
